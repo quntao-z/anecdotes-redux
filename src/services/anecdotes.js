@@ -26,7 +26,7 @@ const increaseVote = async(anecdoteObject) => {
         votes: anecdoteObject.votes + 1
     }
 
-    const response = await axios.put(baseUrl, `/${anecdoteObject.id}`, changedAnecdote)
+    const response = await axios.put(baseUrl + `/${anecdoteObject.id}`, changedAnecdote)
     return response.data
 }
 

@@ -15,7 +15,7 @@ const AnecdoteList = () => {
     const sortedAnecdotes = [...anecdotes].sort((a, b) => b.votes - a.votes)
     const dispatch = useDispatch()
 
-    const vote = (anecdote) => {
+    const vote = async (anecdote) => {
         dispatch(increaseAnecdoteVote(anecdote))
     }
 
