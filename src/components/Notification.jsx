@@ -4,6 +4,7 @@ const Notification = () => {
   const notification = useSelector(({ notification }) => {
     return notification
   })
+
   const style = {
     border: 'solid',
     padding: 10,
@@ -14,7 +15,7 @@ const Notification = () => {
     if (notification !== '') {
       return (
         <div style={style}>
-          you voted &lsquo;{notification}&rsquo;
+          {notification}
         </div>
       )
     }
